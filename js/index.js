@@ -9,10 +9,10 @@ const decimalButton = document.querySelector("#dec")
 
 
 const operations = {
-    "div": (a, b) => a / b ,
-    "mul": (a, b) => a * b ,
-    "sub": (a, b) => a - b ,
-    "sum": (a, b) => a + b
+    "div": (a, b) => eval(`${a}/${b}`), 
+    "mul": (a, b) => eval(`${a}*${b}`),
+    "sub": (a, b) => eval(`${a}-${b}`),
+    "sum": (a, b) => eval(`${a}+${b}`)
 }
 
 const digitWidth = 25
