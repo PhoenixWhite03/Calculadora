@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/calc.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="grid">
+        <header class="header">
+            <h1 class="title">Calcula<b>Dora</b></h1>
+        </header>
+        <main class="main">
+            <div class="calc-container">
+                <div id="user-input">
+                </div>
+                <button id="copy-btn">
+                    <i id="copy-icon" class="bi bi-copy"></i>
+                    <i id="check-icon" class="bi bi-check2-circle"></i>
+                </button>
+                <div class="calc-buttons-box">
+                    <button value="1" class="calc-button number-button">1</button>
+                    <button value="2" class="calc-button number-button">2</button>
+                    <button value="3" class="calc-button number-button">3</button>
+                    <button value="4" class="calc-button number-button">4</button>
+                    <button value="5" class="calc-button number-button">5</button>
+                    <button value="6" class="calc-button number-button">6</button>
+                    <button value="7" class="calc-button number-button">7</button>
+                    <button value="8" class="calc-button number-button">8</button>
+                    <button value="9" class="calc-button number-button">9</button>
+                    <button value="0" class="calc-button number-button">0</button>
+                    <button id="div" class="calc-button operator-button">÷</button>
+                    <button id="mul" class="calc-button operator-button">×</button>
+                    <button id="sub" class="calc-button operator-button">-</button>
+                    <button id="sum" class="calc-button operator-button">+</button>
+                    <button id="eq" class="calc-button">=</button>
+                    <button id="dec" class="calc-button">,</button>
+                    <button id="c" class="calc-button">C</button>
+                    <button id="ca" class="calc-button">CA</button>
+                    <button id="del" class="calc-button">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="js/index.js"></script>
+<script src="js/copy-btn.js"></script>
+</body>
+</html>

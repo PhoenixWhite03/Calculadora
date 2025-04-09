@@ -1,0 +1,150 @@
+.calc-container {
+    background-color: gray;
+    background-image: url("https://i.pinimg.com/736x/99/37/f5/9937f5413050f057098e10baa87f5cd0.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: relative;
+    display: grid;
+    grid-template:
+        "number-input" 1fr
+        "buttons" 4fr /
+        auto;
+
+    gap: 1rem;
+
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+
+    max-width: 30vw;
+    min-width: max-content;
+}
+
+#user-input {
+    grid-area: number-input;
+    font-size: 200%;
+
+    background-color: var(--secondary-calc);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 5%;
+    border: solid var(--text-primary-color);
+    border-radius: 1rem;
+}
+
+#copy-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-primary-color);
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 1rem;
+
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+
+    &:hover {
+        outline: solid var(--text-primary-color);
+    }
+
+    &:active {
+        outline-color: rgb(0, 206, 0);
+    }
+
+    &:active #copy-icon {
+        display: none;
+    }
+
+    &:active #check-icon {
+        font-size: 1.5rem;
+        display: block;
+        color: rgb(0, 206, 0);
+    }
+}
+
+#copy-btn i {
+    font-size: 1rem;
+    color: var(--text-primary-color);
+}
+
+#copy-btn #check-icon {
+    display: none;
+    position: absolute;
+}
+
+.calc-buttons-box {
+    grid-area: buttons;
+
+    display: grid;
+    grid-template:
+        "1 2 3 c del"
+        "4 5 6 mul div"
+        "7 8 9 sub sum"
+        "ca 0 dec eq sum" /
+        1fr 1fr 1fr 1fr 1fr;
+    gap: 0.2rem;
+}
+
+.calc-button {
+    font-size: 200%;
+    user-select: none;
+
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+
+    &:hover {
+        background-color: rgb(255, 255, 255, 0.5);
+    }
+
+    &:active {
+        background-color: rgb(255, 255, 255, 0) !important;
+    }
+}
+
+#div {
+    grid-area: div;
+}
+
+#mul {
+    grid-area: mul;
+}
+
+#sub {
+    grid-area: sub;
+}
+
+#sum {
+    grid-area: sum;
+}
+
+#eq {
+    grid-area: eq;
+}
+
+#c {
+    grid-area: c;
+}
+
+#ca {
+    grid-area: ca;
+}
+
+#del {
+    grid-area: del;
+}
+
+#dec {
+    grid-area: dec;
+}
